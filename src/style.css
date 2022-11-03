@@ -40,14 +40,12 @@
   list-style-position: outside;
 }
 .button {
-  color: var(--dl-color-gray-black);
-  display: inline-block;
+  display: block;
   padding: 0.5rem 1rem;
   font-family: Arial;
-  border-color: var(--dl-color-gray-black);
-  border-width: 1px;
   border-radius: 4px;
   background-color: var(--dl-color-gray-white);
+  box-shadow: 5px 5px 10px 0px #d4d4d4;
 }
 .list-item {
   display: list-item;
@@ -74,17 +72,18 @@
 }
 .section-Text {
   font-size: 18px;
-  font-family: Playfair Display;
+  font-family: Overpass;
   font-weight: 600;
   line-height: 1.55;
-  letter-spacing: 2;
+  letter-spacing: 1;
   text-transform: none;
   text-decoration: none;
 }
 .card-Text {
   font-size: 16px;
   font-style: normal;
-  font-family: Playfair Display;
+  font-family: Overpass;
+  color: white;
   font-weight: 400;
   line-height: 1.55;
   letter-spacing: 1;
@@ -100,7 +99,8 @@
   text-decoration: none;
 }
 .card-Heading {
-  font-size: 24px;
+  font-size: 30px;
+  color: white;
   font-style: normal;
   font-family: Overpass;
   font-weight: 700;
@@ -112,10 +112,10 @@
   font-size: 16px;
   font-family: Overpass;
   font-weight: 700;
-  line-height: 1.55;
   text-transform: capitalize;
   text-decoration: none;
 }
+
 .navbar-Link {
   font-size: 24px;
   font-family: Overpass;
@@ -131,4 +131,5 @@
   line-height: 1.22;
   text-transform: none;
   text-decoration: none;
+  text-align: center;
 }
