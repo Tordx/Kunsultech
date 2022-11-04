@@ -1,13 +1,55 @@
 import React from 'react'
-
 import { Helmet } from 'react-helmet'
-
+import { useEffect , useState } from 'react'
 import NavigationLinks from '../components/navigation-links'
 import './home.css'
 import kunsultek from '../assets/kunsultek.png'
 
-const Home = (props) => {
+
+const Home =  (props) => {
+
+  useEffect(() => {
+    getData();
+  }, []);
+  
+  const [startwithus , setStartwithUs] =  useState(null)
+  const [designanddevelopment , setDelevelopment] =  useState(null)
+  const [planningandconsultancy , setPlanning] =  useState(null)
+  const [personalproject , setPersonalProject] =  useState(null)
+  const [whoweare , setWhoweAre] =  useState(null)
+  const [doyoubuildwebsite , setDoyouBuild] =  useState(null)
+  const [howmuchtimetobuild , setHowmuchTime] =  useState(null)
+  const [hereyouwouldwrite , setYouWrite] =  useState(null)
+  
+  const getData = async () => {
+    try {
+     const response = await fetch('http://10.1.1.101:1337/api/konsulteches/');
+     const json = await response.json();
+     const startwithuss = await json.data[0].attributes.tagline
+     const designanddevelopments = await json.data[1].attributes.tagline
+     const planningandconsultancys = await json.data[2].attributes.tagline
+     const personalprojects = await json.data[3].attributes.tagline
+     const whoweares = await json.data[4].attributes.tagline
+     const doyoubuildwebsites = await json.data[5].attributes.tagline
+     const howmuchtimetobuilds= await json.data[6].attributes.tagline
+     const hereyouwouldwrites = await json.data[7].attributes.tagline
+
+     setDelevelopment(designanddevelopments);
+     setStartwithUs(startwithuss);
+     setPlanning(planningandconsultancys);
+     setPersonalProject(personalprojects);
+     setWhoweAre(whoweares);
+     setDoyouBuild(doyoubuildwebsites);
+     setHowmuchTime(howmuchtimetobuilds);
+     setYouWrite(hereyouwouldwrites);
+  
+   } catch (error) {
+     console.error(error);
+   }
+  }
+
   return (
+  <div>
     <div className="home-container">
       <Helmet>
         <title>Kunsultech</title>
@@ -101,8 +143,7 @@ const Home = (props) => {
               Start with us.
             </h1>
             <span className="home-text02 section-Text">
-             Begin your e-commerce journey with kunsultek, we are the leading expert in e-commerce web and app buidling 
-             with an effective 24/7 support.
+             {startwithus}
             </span>
             <li onClick={() => window.scrollTo(0,10000)} className="home-button anchor button">Let's get started →</li>
             <div className="home-cta-btn-container"></div>
@@ -134,7 +175,7 @@ const Home = (props) => {
             <div className="home-content-container">
               <span className="home-heading3 card-Heading">Design and Development</span>
               <span className="home-text05 card-Text">
-                  We do thorough research on new trends to keep you up on the market without compromising your specification and requirements.
+                  {designanddevelopment}
               </span>
             </div>
           </div>
@@ -150,7 +191,7 @@ const Home = (props) => {
             <div className="home-content-container1">
               <span className="home-heading4 card-Heading">Planning and Consultancy</span>
               <span className="home-text06 card-Text">
-                Hence the name kunsultek, we work with our clients to make sure that we meet their expectation, rest assured competence will be given
+               {planningandconsultancy}
               </span>
             </div>
           </div>
@@ -166,7 +207,7 @@ const Home = (props) => {
             <div className="home-content-container2">
               <span className="home-heading5 card-Heading">Personal Projects</span>
               <span className="home-text07 card-Text">
-                It's more fun introducing yourself the modern way and it is not just a portfolio, but your way to advertise yourself effectively online. 
+                {personalproject}
               </span>
             </div>
           </div>
@@ -181,7 +222,7 @@ const Home = (props) => {
           </div>
           <div className="home-content-container3">
             <div className="home-about-1">
-              <div className="home-container06">
+              {/* <div className="home-container06">
                 <svg viewBox="0 0 1024 1024" className="home-icon20">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
@@ -189,26 +230,26 @@ const Home = (props) => {
                   Lorem ipsum dolor sit amet aulla quis sem at nibh elementum
                   imperdiet.
                 </span>
-              </div>
-              <div className="home-container07">
+              </div> */}
+              {/* <div className="home-container07">
                 <svg viewBox="0 0 1024 1024" className="home-icon22">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
                 <span className="home-text10 card-Text">
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
                 </span>
-              </div>
+              </div> */}
               <div className="home-container08">
                 <svg viewBox="0 0 1024 1024" className="home-icon24">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
                 <span className="home-text11 card-Text">
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+                 {whoweare}
                 </span>
               </div>
             </div>
             <div className="home-about-11">
-              <div className="home-container09">
+              {/* <div className="home-container09">
                 <svg viewBox="0 0 1024 1024" className="home-icon26">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
@@ -225,8 +266,8 @@ const Home = (props) => {
                     />
                   </span>
                 </span>
-              </div>
-              <div className="home-container10">
+              </div> */}
+              {/* <div className="home-container10">
                 <svg viewBox="0 0 1024 1024" className="home-icon28">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
@@ -241,7 +282,7 @@ const Home = (props) => {
                 <span className="home-text17 card-Text">
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -306,10 +347,7 @@ const Home = (props) => {
             </div>
             <div className="home-answer-container">
               <span className="home-answer card-Text">
-                Yes, we build a website complete with front and back-end to
-                manage your sale and transaction, We also work closely with our
-                clients to provide the design and experience that they want
-                their shoppers while shopping in there website
+                {doyoubuildwebsite}
               </span>
             </div>
           </div>
@@ -321,8 +359,7 @@ const Home = (props) => {
             </div>
             <div className="home-answer-container1">
               <span className="home-answer1 card-Text">
-                We focus on effeciency, and competence. A website might need to
-                be delevop for a month or two but in timely manner.
+                {howmuchtimetobuild}
               </span>
             </div>
           </div>
@@ -334,16 +371,7 @@ const Home = (props) => {
             </div>
             <div className="home-answer-container2">
               <span className="home-answer2 card-Text">
-                Here you would give the answer. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                Sed cursus ante dapibus diam.c Sed nisi. Nulla quis sem at nibh
-                elementum imperdiet.
-              </span>
-              <span className="card-Text">
-                Here you would give the answer. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Integer nec odio. Praesent libero.
-                Sed cursus ante dapibus diam.c Sed nisi. Nulla quis sem at nibh
-                elementum imperdiet.
+                {hereyouwouldwrite}
               </span>
             </div>
           </div>
@@ -373,6 +401,7 @@ const Home = (props) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
