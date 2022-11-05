@@ -48,6 +48,31 @@ const Home =  (props) => {
    }
   }
 
+ const chatbox = () => {
+
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "PAGE-ID");
+  chatbox.setAttribute("attribution", "biz_inbox");
+
+ }
+
+ const facebook_init = () => {
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'API-VERSION'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+ }
+
   return (
   <div>
     <div className="home-container">
@@ -63,6 +88,8 @@ const Home =  (props) => {
                 <svg viewBox="0 0 1024 1024" className="home-icon">
                   <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
                 </svg>
+               
+
                 {/* <header data-role="Header" className="home-header">
                   <img
                     alt="logo"
@@ -124,13 +151,13 @@ const Home =  (props) => {
                   <path d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"></path>
                 </svg>
               </div>
-            </div>
-            <div className="home-links-container">
-              <span className="home-link navbar-Link">About</span>
-              <span className="home-link1 navbar-Link">Experience</span>
-              <span className="home-link2 navbar-Link">Portofolio</span>
-              <span className="navbar-Link">Contact</span>
-            </div>
+              </div>
+              <div className="home-links-container">
+                <span className="home-link navbar-Link">About</span>
+                <span className="home-link1 navbar-Link">Experience</span>
+                <span className="home-link2 navbar-Link">Portofolio</span>
+                <span className="navbar-Link">Contact</span>
+              </div>
           </div>
         </div>
       </div>
@@ -138,6 +165,7 @@ const Home =  (props) => {
       <div className="home-section-separator1"></div>
       <div className="home-container05">
         <div className="home-hero">
+
           <div className="home-hero-text-container">
             <h1 className="home-heading2">
               Start with us.
@@ -145,20 +173,20 @@ const Home =  (props) => {
             <span className="home-text02 section-Text">
              {startwithus}
             </span>
-            <li onClick={() => window.scrollTo(0,10000)} className="home-button anchor button">Let's get started →</li>
+            <li onClick={() => window.scrollTo(0,10000)} className="home-button anchor button">Contact Us →</li>
             <div className="home-cta-btn-container"></div>
           </div>
-          <img
+          {/* <img
             alt="image"
             src="https://i.pinimg.com/originals/50/78/a0/5078a05eb1b6847d93383eaa4c0ed500.gif"
             className="home-image2"
             draggable="false"
-          />
+          /> */}
         </div>
       </div>
       <div className="home-features">
         <div className="home-heading-container">
-          <h2 className="home-text03 section-Heading">Our Services</h2>
+          <h2 className="home-text03 section-Heading">What we offer</h2>
           <span className="home-text04 section-Text">
             Jump start your ecommerce business with us
           </span>
@@ -167,7 +195,7 @@ const Home =  (props) => {
           <div className="home-card">
             <div className="home-icon-container">
               <img
-              src='https://i.imgur.com/f5a78al.png'
+              src='https://i.imgur.com/oJJaJRS.png'
               className="home-icon14"
               draggable="false"
               />
@@ -182,8 +210,8 @@ const Home =  (props) => {
           <div className="home-card1">
             <div className="home-icon-container1">
               <img
-              src='https://loudvideos.com/wp-content/uploads/2019/06/whiteboard-animation-and-explainer-video-studio.png'
-              className="home-icon18"
+              src='https://i.imgur.com/Z3CS1pt.png'
+              className="home-icon17"
               draggable="false"
 
               />
@@ -199,13 +227,13 @@ const Home =  (props) => {
             <div className="home-icon-container2">
               <img
               className="home-icon18"
-              src='https://i.imgur.com/vdxCacU.png'
+              src='https://i.imgur.com/GP3H82d.png'
               draggable="false"
 
               />
             </div>
             <div className="home-content-container2">
-              <span className="home-heading5 card-Heading">Personal Projects</span>
+              <span className="home-heading5 card-Heading">Affordable Rates</span>
               <span className="home-text07 card-Text">
                 {personalproject}
               </span>
@@ -216,8 +244,14 @@ const Home =  (props) => {
       <div className="home-about">
         <div className="home-max-content-width-container">
           <div className="home-heading-container1">
-            <h1 className="section-Heading home-text08">
-             Who we are
+          <img
+              className="about-icon"
+              src={kunsultek}
+              draggable="false"
+
+              />
+            <h1 className="section-Heading1 home-text08">
+             Kunsultech
             </h1>
           </div>
           <div className="home-content-container3">
@@ -239,17 +273,25 @@ const Home =  (props) => {
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
                 </span>
               </div> */}
-              <div className="home-container08">
-                <svg viewBox="0 0 1024 1024" className="home-icon24">
+              <div className="home-text11 home-heading10">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text11 card-Text">
-                 {whoweare}
+                  <span className=" card-Heading">WHO WE ARE</span>
+                <span className="home-text11 card-about">
+                 {/* {whoweare} */} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                </span>
+               
+              </div>
+              <div className="home-text11 home-heading10">
+                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
+                  <span className=" card-Heading">OUR GOAL</span>
+                <span className="home-text11 card-about">
+                 {/* {whoweare} */} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </span>
               </div>
+              <a onClick={() => window.scrollTo(0,2750)} className="client-button anchor">Our clients</a>
             </div>
-            <div className="home-about-11">
-              {/* <div className="home-container09">
+            {/* <div className="home-about-11">
+              <div className="home-container09">
                 <svg viewBox="0 0 1024 1024" className="home-icon26">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                 </svg>
@@ -282,36 +324,37 @@ const Home =  (props) => {
                 <span className="home-text17 card-Text">
                   Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
                 </span>
-              </div> */}
-            </div>
+              </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className="home-section-separator2"></div>
       <div className="home-clients">
         <div className="home-heading-container2">
-          <h1 className="home-text18 section-Heading">Clients</h1>
-          <span className="home-text19 section-Text">
-            Here we will put your clients&apos; or partners&apos; logos
+        <span className="home-text19 section-Text">
+          Development success are proven by
           </span>
+          <h1 className="home-text18 section-about-heading">Clients</h1>
+          
         </div>
         <div className="home-logo-container">
           <img
             alt="image"
-            src="/playground_assets/default-img.svg"
+            src="https://i.imgur.com/S9u0jge.jpg"
             className="home-logo"
           />
           <img
             alt="image"
-            src="/playground_assets/default-img.svg"
-            className="home-logo1"
+            src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/307533066_474284578077593_4484723535012943578_n.png?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFwpRSzv2n9t1WO-hasvxWRoqpnzw4Bve6iqmfPDgG97tSGkS8nt8d4l17I9dvN2Ni3GXlTr2LiYNy3mo7P11NW&_nc_ohc=ye0jYjSCrjAAX94UXui&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfA76AMOetc0Z_dwiKNBX9hsqDwaZjx69vkilNBvM2mbaA&oe=636A10ED"
+            className="home-logo"
           />
           <img
             alt="image"
-            src="/playground_assets/default-img.svg"
-            className="home-logo2"
+            src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/261307085_744887260247764_1631221456119609337_n.png?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE-fwihNThisPjzUv1GcdEC7P28aUc3I1ns_bxpRzcjWUh6q8esq63IQ1H8KZWTccyXHKYByrHIqmbVm3b-WzS6&_nc_ohc=5IRb6KhN5esAX-yzbAc&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfA5fOHXG_g_pmhcEP4Io7-oCg9IG2X1pGNbPccy7EcWWg&oe=6369FA50"
+            className="home-logo"
           />
-          <img
+          {/* <img
             alt="image"
             src="/playground_assets/default-img.svg"
             className="home-logo3"
@@ -320,14 +363,14 @@ const Home =  (props) => {
             alt="image"
             src="/playground_assets/default-img.svg"
             className="home-logo4"
-          />
+          /> */}
         </div>
       </div>
       <div className="home-pricing">
         <div className="home-heading-container3">
-          <h1 className="home-text20">Ask for a quote</h1>
+          <h1 className="home-text20">“The Bridge between <br></br>  <span className='hometextwork'> reality and a dream is work</span>”</h1>
           <span className="home-text21">
-            <span className="home-text22">Email: valloryan2gmail.com</span>
+            <span className="home-text22">- Jared Leto</span>
             <br></br>
           </span>
         </div>
@@ -336,13 +379,13 @@ const Home =  (props) => {
       <div className="home-section-separator4"></div>
       <div className="home-faqs">
         <h2 className="home-text24 section-Heading">
-          Check the most common questions
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </h2>
         <div className="home-content-container4">
           <div className="home-faq">
             <div className="home-question-container">
               <span className="home-question">
-                Do you build a complete website?
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </span>
             </div>
             <div className="home-answer-container">

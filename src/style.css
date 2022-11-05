@@ -89,7 +89,21 @@
   letter-spacing: 1;
   text-transform: none;
   text-decoration: none;
+  
 }
+
+.card-about {
+  font-size: 1.2rem;
+  font-style: 'bold';
+  font-family: sans-serif;
+  color: white;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: 1;
+  text-transform: none;
+  text-decoration: none;
+}
+
 .content {
   font-size: 16px;
   font-family: Arial;
@@ -108,6 +122,41 @@
   text-transform: none;
   text-decoration: none;
 }
+
+.client-button {
+
+  color: var(--dl-color-gray-white);
+  text-align: center;
+  padding-top: var(--dl-space-space-doubleunit);
+  padding-left: var(--dl-space-space-fiveunits);
+  border-radius: var(--dl-radius-radius-radius8);
+  padding-right: var(--dl-space-space-fiveunits);
+  padding-bottom: var(--dl-space-space-unit);
+  background-color: #1fc2c0;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+
+}
+
+.client-button:hover {
+
+  cursor: pointer;
+  background-color: #1f2da5;
+
+}
+
+.client-b-text {
+
+  font-size: 1.2rem;
+  font-family: Overpass;
+  color: white;
+  font-weight: 900;
+  align-content: center;
+
+}
+
 .anchor {
   font-size: 16px;
   font-family: Overpass;
@@ -125,7 +174,29 @@
   text-decoration: none;
 }
 .section-Heading {
-  font-size: 48px;
+  font-size: 50px;
+  font-family: Overpass;
+  font-weight: 900;
+  line-height: 1.22;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+.section-Heading1 {
+  font-size: 50px;
+  font-family: Overpass;
+  font-weight: 900;
+  line-height: 1.22;
+  text-transform: none;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.section-about-heading {
+  margin-top: 1rem;
+  font-size: 75px;
   font-family: Overpass;
   font-weight: 900;
   line-height: 1.22;
