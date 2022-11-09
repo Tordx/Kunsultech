@@ -4,6 +4,7 @@ import { useEffect , useState } from 'react'
 import NavigationLinks from '../components/navigation-links'
 import './home.css'
 import kunsultek from '../assets/kunsultek.png'
+import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat'
 
 
 const Home =  (props) => {
@@ -460,6 +461,7 @@ const Home =  (props) => {
         </div>
       </div>
     </div>
+      <MessengerCustomerChat pageId="100087278455379" appId="822319728885755"/>
     </div>
   )
 }
