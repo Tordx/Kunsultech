@@ -10,9 +10,9 @@ const NavigationLinks = (props) => {
   return (
     <nav id = 'mobile-cancel-nav' className={`navigation-links-nav ${props.rootClassName} `}>
       <a onClick={() => window.scrollTo(0, 0)} className="navigation-links-text">{props.text1}</a>
-      <a onClick={() => window.scrollTo(0, 900)} className="navigation-links-text1">{props.text2}</a>
-      <a onClick={() => window.scrollTo(0, 1780)} className="navigation-links-text2">{props.text3}</a>
-      <a onClick={() => window.scrollTo(0, 2750)} className="navigation-links-text2">{props.text4}</a>
+      <a onClick={() => window.scrollTo(0, 1000)} className="navigation-links-text1">{props.text2}</a>
+      <a onClick={() => window.scrollTo(0, 2098)} className="navigation-links-text2">{props.text3}</a>
+      <a onClick={() => window.scrollTo(0, 3085)} className="navigation-links-text2">{props.text4}</a>
       <span onClick={() => window.scrollTo(0, 10000)} className="navigation-links-text3">{props.text5}</span>
     </nav>
     

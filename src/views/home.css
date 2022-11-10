@@ -225,7 +225,7 @@
   height: 1px;
   display: flex;
   margin-top: var(--dl-space-space-tenunits);
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   background-color: var(--dl-color-gray-900);
 }
@@ -240,7 +240,7 @@
 .home-container05 {
   width: 100%;
   display: flex;
-  height: 900px;
+  height: 1000px;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -300,7 +300,7 @@
   align-items: center;
   justify-content: center;
   padding-top: var(--dl-space-space-fiveunits);
-  margin-bottom: 107px;
+  margin-bottom: 300px;
   padding-right: var(--dl-space-space-tripleunit);
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fiveunits);
@@ -472,7 +472,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 140px;
+  padding-bottom: 200px;
   justify-content: center;
   background-color: var(--dl-color-white-900);
   background-image: url('https://media.gettyimages.com/id/1177692930/video/blurred-office-and-employee-group-presentation.jpg?s=640x640&k=20&c=zclct3RXc0u1kEpS1GAt5rQbipdwbI62bGN23UgS1bA=');
@@ -676,6 +676,22 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fiveunits);
 }
+
+.background-client{
+
+  
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: var(--dl-space-space-tripleunit);
+  margin-bottom: var(--dl-space-space-fiveunits);
+  padding-right: var(--dl-space-space-tripleunit);
+  flex-direction: column;
+  padding-bottom: var(--dl-space-space-fiveunits);
+  background-color: #e5e7eb;
+
+}
+
 .home-heading-container2 {
   width: 45%;
   display: flex;
@@ -792,7 +808,7 @@
   width: 100%;
   height: 1px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   background-color: var(--dl-color-gray-900);
 }
@@ -800,7 +816,7 @@
   width: 100%;
   display: flex;
   max-width: var(--dl-size-size-maxcontent);
-  margin-top: var(--dl-space-space-fiveunits);
+  margin-top: 150px;
   align-items: center;
   padding-top: var(--dl-space-space-fiveunits);
   padding-left: var(--dl-space-space-tripleunit);
@@ -809,59 +825,132 @@
   flex-direction: column;
   padding-bottom: var(--dl-space-space-fiveunits);
   justify-content: flex-start;
+  background-color: #e5e7eb;
+  border-radius: 15px;
 }
 .home-text24 {
-  margin-bottom: var(--dl-space-space-fourunits);
+  margin-bottom: var(--dl-space-space-unit);
 }
 .home-content-container4 {
+
   width: 100%;
   display: flex;
-  align-self: stretch;
+  align-self: center;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 .home-faq {
-  width: 85%;
+  width: 100%;
   display: flex;
-  align-items: flex-start;
-  border-color: var(--dl-color-gray-900);
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
+  align-items: center;
+  align-content: center;
+  padding-top: var(--dl-space-space-doubleunit);
   margin-bottom: var(--dl-space-space-fourunits);
   flex-direction: column;
+  text-align: center;
 }
 .home-question-container {
+
   width: 100%;
   align-self: center;
   font-style: normal;
   font-family: Open Sans;
   font-weight: 700;
-  padding-top: var(--dl-space-space-doubleunit);
   padding-left: var(--dl-space-space-fourunits);
   border-radius: var(--dl-radius-radius-radius8);
   padding-right: var(--dl-space-space-fourunits);
   padding-bottom: var(--dl-space-space-doubleunit);
-  background-color: var(--dl-color-gray-900);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 .home-question {
-  font-size: 18px;
+
+  font-size: 20px;
   font-style: normal;
-  font-family: Open Sans;
-  font-weight: 700;
+  text-align: center;
+  align-items: center;
 }
 .home-answer-container {
+  
+  width: 100%;
   display: flex;
-  padding: var(--dl-space-space-fourunits);
+  padding: var(--dl-space-space-doubleunit);
   font-style: normal;
   font-family: Open Sans;
-  font-weight: 700;
+  font-weight: 0;
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  margin-top: 20px;
+}
+
+input {
+  text-align: left;
+  
+}
+
+::-webkit-input-placeholder {
+  text-align: left;
+}
+
+:-moz-placeholder {
+  text-align: left;
+}
+
+
+.home-answer-name {
+  
+  width: 100%;
+  display: flex;
+  padding: var(--dl-space-space-doubleunit);
+  font-style: normal;
+  font-family: Open Sans;
+  font-weight: 0;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.home-answer-messaging {
+  display: flex;
+  width: 100%;
+  font-style: normal;
+  font-family: Open Sans;
+  font-weight: 0;
+  justify-content: flex-start;
+  align-self: flex-start;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 7px ;
+  height: 150px; 
+  line-height: 28px;
+
+}
+
+.messaging-text {
+
+  font-size: 20px;
+  text-align: left;
+  margin-top: 20px;
+
+}
+
+.contact-us {
+  
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.user-phone {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 .home-answer {
   margin-bottom: var(--dl-space-space-unit);
@@ -966,7 +1055,7 @@
 }
 .home-subscribe {
   width: 100%;
-  border: 2px dashed rgba(120, 120, 120, 0.4);
+  border: 1px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -986,7 +1075,6 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--dl-color-gray-white);
 }
 .home-footer {
   width: 100%;
@@ -1006,18 +1094,18 @@
   flex-direction: row;
 }
 .home-icon32 {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: var(--dl-space-space-doubleunit);
 }
 .home-icon34 {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   margin-right: var(--dl-space-space-doubleunit);
 }
 .home-icon36 {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
 }
 .home-copyright-container {
   display: flex;
@@ -1027,7 +1115,7 @@
 .home-icon38 {
   width: 24px;
   height: 24px;
-  margin-right: var(--dl-space-space-doubleunit);
+  margin-right: var(--dl-space-space-unit);
 }
 @media(max-width: 991px) {
   .home-heading {

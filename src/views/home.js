@@ -75,6 +75,7 @@ const Home =  (props) => {
 
   return (
   <div>
+    <body>
     <div className="home-container">
       <Helmet>
         <title>Kunsultech</title>
@@ -171,9 +172,9 @@ const Home =  (props) => {
               Start with us.
             </h1>
             <span className="home-text02 section-Text">
-             {startwithus}
-            </span>
-            <li onClick={() => window.scrollTo(0,10000)} className="home-button anchor button">Contact Us →</li>
+             {startwithus} Begin your online journey with Kunsultech, we are a fast growing experts in e-commerce and landing page web development company in the Philippines.
+            </span> 
+            <li onClick={() => window.scrollTo(0,10000)} className="home-button anchor button">Ask for qoute →</li>
             <div className="home-cta-btn-container"></div>
           </div>
           {/* <img
@@ -203,7 +204,7 @@ const Home =  (props) => {
             <div className="home-content-container">
               <span className="home-heading3 card-Heading">Design and Development</span>
               <span className="home-text05 card-Text">
-                  {designanddevelopment}
+                  {designanddevelopment}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </span>
             </div>
           </div>
@@ -217,9 +218,9 @@ const Home =  (props) => {
               />
             </div>
             <div className="home-content-container1">
-              <span className="home-heading4 card-Heading">Planning and Consultancy</span>
+              <span className="home-heading4 card-Heading">Maintenance and Hosting</span>
               <span className="home-text06 card-Text">
-               {planningandconsultancy}
+               {planningandconsultancy}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </span>
             </div>
           </div>
@@ -235,7 +236,7 @@ const Home =  (props) => {
             <div className="home-content-container2">
               <span className="home-heading5 card-Heading">Affordable Rates</span>
               <span className="home-text07 card-Text">
-                {personalproject}
+                {personalproject}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </span>
             </div>
           </div>
@@ -256,28 +257,12 @@ const Home =  (props) => {
           </div>
           <div className="home-content-container3">
             <div className="home-about-1">
-              {/* <div className="home-container06">
-                <svg viewBox="0 0 1024 1024" className="home-icon20">
-                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text09 card-Text">
-                  Lorem ipsum dolor sit amet aulla quis sem at nibh elementum
-                  imperdiet.
-                </span>
-              </div> */}
-              {/* <div className="home-container07">
-                <svg viewBox="0 0 1024 1024" className="home-icon22">
-                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text10 card-Text">
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-                </span>
-              </div> */}
+              
               <div className="home-text11 home-heading10">
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                   <span className=" card-Heading">WHO WE ARE</span>
                 <span className="home-text11 card-about">
-                 {/* {whoweare} */} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                 {/* {whoweare} */} We are a web developing company focusing on e-commerce solutions in platform, design, and integration throughout multiple platforms such as prestashop, wordpress, shopify and more.
                 </span>
                
               </div>
@@ -285,51 +270,16 @@ const Home =  (props) => {
                   <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
                   <span className=" card-Heading">OUR GOAL</span>
                 <span className="home-text11 card-about">
-                 {/* {whoweare} */} Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                 {/* {whoweare} */} We're here to help you and be part of your e-commerce success, offering wide solutions and interactive discussion for development to keep you up on track with trends on the market.
                 </span>
               </div>
               <a onClick={() => window.scrollTo(0,2750)} className="client-button anchor">Our clients</a>
             </div>
-            {/* <div className="home-about-11">
-              <div className="home-container09">
-                <svg viewBox="0 0 1024 1024" className="home-icon26">
-                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text12 card-Text">
-                  <span>
-                    Lorem ipsum dolor sit amet aulla quis sem at nibh elementum
-                  </span>
-                  <br></br>
-                  <span>
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: ' ',
-                      }}
-                    />
-                  </span>
-                </span>
-              </div> */}
-              {/* <div className="home-container10">
-                <svg viewBox="0 0 1024 1024" className="home-icon28">
-                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text16 card-Text">
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-                </span>
-              </div>
-              <div className="home-container11">
-                <svg viewBox="0 0 1024 1024" className="home-icon30">
-                  <path d="M170 512q0-140 101-241t241-101 241 101 101 241-101 241-241 101-241-101-101-241z"></path>
-                </svg>
-                <span className="home-text17 card-Text">
-                  Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-                </span>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
       <div className="home-section-separator2"></div>
+      <div className='background-client'>
       <div className="home-clients">
         <div className="home-heading-container2">
         <span className="home-text19 section-Text">
@@ -346,24 +296,19 @@ const Home =  (props) => {
           />
           <img
             alt="image"
-            src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/307533066_474284578077593_4484723535012943578_n.png?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeFwpRSzv2n9t1WO-hasvxWRoqpnzw4Bve6iqmfPDgG97tSGkS8nt8d4l17I9dvN2Ni3GXlTr2LiYNy3mo7P11NW&_nc_ohc=ye0jYjSCrjAAX94UXui&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfA76AMOetc0Z_dwiKNBX9hsqDwaZjx69vkilNBvM2mbaA&oe=636A10ED"
+            src="https://i.imgur.com/zCQTYqL.png"
             className="home-logo"
           />
           <img
             alt="image"
-            src="https://scontent.fmnl25-5.fna.fbcdn.net/v/t39.30808-6/261307085_744887260247764_1631221456119609337_n.png?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeE-fwihNThisPjzUv1GcdEC7P28aUc3I1ns_bxpRzcjWUh6q8esq63IQ1H8KZWTccyXHKYByrHIqmbVm3b-WzS6&_nc_ohc=5IRb6KhN5esAX-yzbAc&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfA5fOHXG_g_pmhcEP4Io7-oCg9IG2X1pGNbPccy7EcWWg&oe=6369FA50"
+            src="https://i.imgur.com/3ZZmBMH.png"
             className="home-logo"
-          />
-          {/* <img
-            alt="image"
-            src="/playground_assets/default-img.svg"
-            className="home-logo3"
           />
           <img
             alt="image"
-            src="/playground_assets/default-img.svg"
-            className="home-logo4"
-          /> */}
+            src="https://i.imgur.com/Q2jGS82.png"
+            className="home-logo"
+          />
         </div>
       </div>
       <div className="home-pricing">
@@ -375,48 +320,29 @@ const Home =  (props) => {
           </span>
         </div>
       </div>
+      </div>
       <div className="home-section-separator3"></div>
       <div className="home-section-separator4"></div>
       <div className="home-faqs">
         <h2 className="home-text24 section-Heading">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Get in touch
         </h2>
+        <span className='home-text19 section-Text'>Leave us a message to learn more about our low-cost pricing and procedures.</span>
         <div className="home-content-container4">
           <div className="home-faq">
             <div className="home-question-container">
               <span className="home-question">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Contact form
               </span>
             </div>
-            <div className="home-answer-container">
-              <span className="home-answer card-Text">
-                {doyoubuildwebsite}
-              </span>
-            </div>
-          </div>
-          <div className="home-faq1">
-            <div className="home-question-container1">
-              <span className="home-question1">
-                How much time does is take you build a website
-              </span>
-            </div>
-            <div className="home-answer-container1">
-              <span className="home-answer1 card-Text">
-                {howmuchtimetobuild}
-              </span>
-            </div>
-          </div>
-          <div className="home-faq2">
-            <div className="home-question-container2">
-              <span className="home-question2">
-                Here you would write a frequently asked question?
-              </span>
-            </div>
-            <div className="home-answer-container2">
-              <span className="home-answer2 card-Text">
-                {hereyouwouldwrite}
-              </span>
-            </div>
+            <form className="contact-us" action="/submitted" >
+            <input  className="home-answer-name" type="name" id="name" name="First Name" placeholder="Full name" pattern=""></input>
+            <input  className="home-answer-container"  type="phone" id="phone" name="Phone number" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></input>
+            <input  className="home-answer-container"  type="email" id="email" name="Email" placeholder="Email" pattern=""></input>
+            <input  className="home-answer-container"  type="company" id="company" name="Company" placeholder="Company" pattern=""></input>
+            <textarea  className="home-answer-messaging"  type="message" id="message" name="Message" placeholder="Message" pattern=""></textarea>
+            <input  className="client-button anchor" type="submit"></input>
+        </form> 
           </div>
         </div>
       </div>
@@ -426,12 +352,16 @@ const Home =  (props) => {
       <div className="home-footer-container">
         <div className="home-footer">
           <div className="home-social-links">
+            <a href='https://twitter.com/kunsultech'>
             <svg viewBox="0 0 950.8571428571428 1024" className="home-icon32">
               <path d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"></path>
             </svg>
+            </a>
+            <a href = "https://www.facebook.com/profile.php?id=100087278455379">
             <svg viewBox="0 0 877.7142857142857 1024" className="home-icon34">
               <path d="M713.143 73.143c90.857 0 164.571 73.714 164.571 164.571v548.571c0 90.857-73.714 164.571-164.571 164.571h-107.429v-340h113.714l17.143-132.571h-130.857v-84.571c0-38.286 10.286-64 65.714-64l69.714-0.571v-118.286c-12-1.714-53.714-5.143-101.714-5.143-101.143 0-170.857 61.714-170.857 174.857v97.714h-114.286v132.571h114.286v340h-304c-90.857 0-164.571-73.714-164.571-164.571v-548.571c0-90.857 73.714-164.571 164.571-164.571h548.571z"></path>
             </svg>
+            </a>
             <svg viewBox="0 0 877.7142857142857 1024" className="home-icon36">
               <path d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"></path>
             </svg>
@@ -440,11 +370,12 @@ const Home =  (props) => {
             <svg viewBox="0 0 1024 1024" className="home-icon38">
               <path d="M512 854q140 0 241-101t101-241-101-241-241-101-241 101-101 241 101 241 241 101zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125zM506 390q-80 0-80 116v12q0 116 80 116 30 0 50-17t20-43h76q0 50-44 88-42 36-102 36-80 0-122-48t-42-132v-12q0-82 40-128 48-54 124-54 66 0 104 38 42 42 42 98h-76q0-14-6-26-10-20-14-24-20-20-50-20z"></path>
             </svg>
-            <span className="anchor">Copyright, 2021</span>
+            <span className="anchor">Kunsultech, 2021</span>
           </div>
         </div>
       </div>
     </div>
+    </body>
     </div>
   )
 }
