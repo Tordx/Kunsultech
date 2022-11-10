@@ -4,49 +4,65 @@ import { useEffect , useState } from 'react'
 import NavigationLinks from '../components/navigation-links'
 import './home.css'
 import kunsultek from '../assets/kunsultek.png'
+import MessengerCustomerChat from 'react-messenger-customer-chat/lib/MessengerCustomerChat'
 
 
 const Home =  (props) => {
 
   useEffect(() => {
     getData();
+    getPicture();
   }, []);
+
   
   const [startwithus , setStartwithUs] =  useState(null)
   const [designanddevelopment , setDelevelopment] =  useState(null)
   const [planningandconsultancy , setPlanning] =  useState(null)
   const [personalproject , setPersonalProject] =  useState(null)
-  const [whoweare , setWhoweAre] =  useState(null)
-  const [doyoubuildwebsite , setDoyouBuild] =  useState(null)
-  const [howmuchtimetobuild , setHowmuchTime] =  useState(null)
-  const [hereyouwouldwrite , setYouWrite] =  useState(null)
+  // const [whoweare , setWhoweAre] =  useState(null)
+  // const [doyoubuildwebsite , setDoyouBuild] =  useState(null)
+  // const [howmuchtimetobuild , setHowmuchTime] =  useState(null)
+  // const [hereyouwouldwrite , setYouWrite] =  useState(null)
   
   const getData = async () => {
     try {
-     const response = await fetch('http://10.1.1.101:1337/api/konsulteches/');
+     const response = await fetch('http://10.1.1.110:1337/api/konsultech-texts/');
      const json = await response.json();
-     const startwithuss = await json.data[0].attributes.tagline
-     const designanddevelopments = await json.data[1].attributes.tagline
-     const planningandconsultancys = await json.data[2].attributes.tagline
-     const personalprojects = await json.data[3].attributes.tagline
-     const whoweares = await json.data[4].attributes.tagline
-     const doyoubuildwebsites = await json.data[5].attributes.tagline
-     const howmuchtimetobuilds= await json.data[6].attributes.tagline
-     const hereyouwouldwrites = await json.data[7].attributes.tagline
+     const startwithuss = await json.data[0].attributes.konText
+     const designanddevelopments = await json.data[1].attributes.konText
+     const planningandconsultancys = await json.data[2].attributes.konText
+     const personalprojects = await json.data[3].attributes.konText
+    //  const whoweares = await json.data[4].attributes.konText
+    //  const doyoubuildwebsites = await json.data[5].attributes.konText
+    //  const howmuchtimetobuilds= await json.data[6].attributes.konText
+    //  const hereyouwouldwrites = await json.data[7].attributes.konText
+  
 
      setDelevelopment(designanddevelopments);
      setStartwithUs(startwithuss);
      setPlanning(planningandconsultancys);
      setPersonalProject(personalprojects);
-     setWhoweAre(whoweares);
-     setDoyouBuild(doyoubuildwebsites);
-     setHowmuchTime(howmuchtimetobuilds);
-     setYouWrite(hereyouwouldwrites);
+    //  setWhoweAre(whoweares);
+    //  setDoyouBuild(doyoubuildwebsites);
+    //  setHowmuchTime(howmuchtimetobuilds);
+    //  setYouWrite(hereyouwouldwrites);
   
    } catch (error) {
      console.error(error);
    }
   }
+
+  const getPicture = async () => {
+    try {
+     const response = await fetch('http://10.1.1.110:1337/api/upload/files/1');
+     const json = await response.json();
+      console.log(json)
+      console.log('json')
+   } catch (error) {
+     console.error(error);
+   }
+  }
+  
 
  const chatbox = () => {
 
@@ -75,7 +91,6 @@ const Home =  (props) => {
 
   return (
   <div>
-    <body>
     <div className="home-container">
       <Helmet>
         <title>Kunsultech</title>
@@ -135,7 +150,7 @@ const Home =  (props) => {
             </div>
             <div className="home-heading" id='row'>
               <a href = 'localhost:3000'>
-                <img src={kunsultek} className= "header-image" width="50" height="50" align = 'left' draggable="false" />
+                <img src='http://10.1.1.110:1337/uploads/kunsultek_ff8363eb64.png?updated_at=2022-11-05T16:05:29.386Z' className= "header-image" width="50" height="50" align = 'left' draggable="false" />
                 <text data-v-66c783da="" transform="translate(362.09 278.09) scale(1.30)" class="fill-current cls-2 text-dark-vue dark:text-light-vue lowercase text-dark-vue">
             kunsultech
                 </text>
@@ -196,7 +211,7 @@ const Home =  (props) => {
           <div className="home-card">
             <div className="home-icon-container">
               <img
-              src='https://i.imgur.com/oJJaJRS.png'
+              src='http://10.1.1.110:1337/uploads/123_73815b93eb.png?updated_at=2022-11-05T15:13:49.121Z'
               className="home-icon14"
               draggable="false"
               />
@@ -211,7 +226,7 @@ const Home =  (props) => {
           <div className="home-card1">
             <div className="home-icon-container1">
               <img
-              src='https://i.imgur.com/Z3CS1pt.png'
+              src='http://10.1.1.110:1337/uploads/1234_d626a014bf.png?updated_at=2022-11-05T15:14:22.210Z'
               className="home-icon17"
               draggable="false"
 
@@ -228,7 +243,7 @@ const Home =  (props) => {
             <div className="home-icon-container2">
               <img
               className="home-icon18"
-              src='https://i.imgur.com/GP3H82d.png'
+              src='http://10.1.1.110:1337/uploads/12345_b5fd50f29b.png?updated_at=2022-11-05T15:15:13.613Z'
               draggable="false"
 
               />
@@ -247,7 +262,7 @@ const Home =  (props) => {
           <div className="home-heading-container1">
           <img
               className="about-icon"
-              src={kunsultek}
+              src='http://10.1.1.110:1337/uploads/kunsultek_ff8363eb64.png?updated_at=2022-11-05T16:05:29.386Z'
               draggable="false"
 
               />
@@ -291,17 +306,17 @@ const Home =  (props) => {
         <div className="home-logo-container">
           <img
             alt="image"
-            src="https://i.imgur.com/S9u0jge.jpg"
+            src="http://10.1.1.110:1337/uploads/12345678_74b77d2fd1.jpg?updated_at=2022-11-05T15:51:59.750Z"
             className="home-logo"
           />
           <img
             alt="image"
-            src="https://i.imgur.com/zCQTYqL.png"
+            src="http://10.1.1.110:1337/uploads/123456_ca4343d2cb.png?updated_at=2022-11-05T15:52:00.149Z"
             className="home-logo"
           />
           <img
             alt="image"
-            src="https://i.imgur.com/3ZZmBMH.png"
+            src="http://10.1.1.110:1337/uploads/1234567_fdab00fda7.png?updated_at=2022-11-05T15:52:00.043Z"
             className="home-logo"
           />
           <img
@@ -375,7 +390,7 @@ const Home =  (props) => {
         </div>
       </div>
     </div>
-    </body>
+      <MessengerCustomerChat pageId="100087278455379" appId="822319728885755"/>
     </div>
   )
 }

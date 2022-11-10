@@ -23,7 +23,7 @@ NavigationLinks.defaultProps = {
   text1: 'Home',
   text2: 'What we do',
   text3: 'About',
-  text4: 'Pricing',
+  text4: 'Clients',
   text5: 'Contact us',
   rootClassName: '',
 }
